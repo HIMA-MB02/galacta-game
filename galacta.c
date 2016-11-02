@@ -191,13 +191,13 @@ void mediaInit() {
 	SDL_RenderSetLogicalSize(gRenderer, 640, 480);
 
 	//Load music
-	gMusic = Mix_LoadMUS( "Resources/SoundR/beat.mp3" );
+	gMusic = Mix_LoadMUS( "beat.mp3" );
 
 	if( gMusic == NULL ) {
 
 		printf( "Failed to load beat music! SDL_mixer Error: %s\n", Mix_GetError() );
 	}
-	gOver = Mix_LoadMUS( "Resources/SoundR/GameOver.wav" );
+	gOver = Mix_LoadMUS( "GameOver.wav" );
 
 	if( gOver == NULL ) {
 
@@ -205,7 +205,7 @@ void mediaInit() {
 	}
 	
 	//Loading the SpaceShip
-	SDL_Surface* objSurface = SDL_LoadBMP("Resources/ship.bmp");
+	SDL_Surface* objSurface = SDL_LoadBMP("ship.bmp");
 	SDL_SetColorKey( objSurface, SDL_TRUE, SDL_MapRGB(objSurface->format, 255, 255, 255) );
 	shipTexture = SDL_CreateTextureFromSurface(gRenderer, objSurface);
 	SDL_FreeSurface(objSurface);
@@ -216,7 +216,7 @@ void mediaInit() {
 	}
 
 	//Load Sound Effect for ShipExplode
-	gShipExplode = Mix_LoadWAV( "Resources/SoundR/ShipExplode.wav" );
+	gShipExplode = Mix_LoadWAV( "ShipExplode.wav" );
 
 	if( gShipExplode == NULL ) {
 
@@ -224,7 +224,7 @@ void mediaInit() {
 	}
 
 	//load the bullet  
- 	SDL_Surface *bullet = SDL_LoadBMP("Resources/bullet.bmp");
+ 	SDL_Surface *bullet = SDL_LoadBMP("bullet.bmp");
 	bulletTexture = SDL_CreateTextureFromSurface(gRenderer, bullet);
  	SDL_FreeSurface(bullet);
 
@@ -234,7 +234,7 @@ void mediaInit() {
  	}
 
 	//Load Sound Effect for Bullet
-	gShoot = Mix_LoadWAV( "Resources/SoundR/shoot.wav" );
+	gShoot = Mix_LoadWAV( "shoot.wav" );
 
 	if( gShoot == NULL ) {
 
@@ -242,7 +242,7 @@ void mediaInit() {
 	}
 
 	//Load the enemy
-	SDL_Surface *enemy = SDL_LoadBMP("Resources/enemy.bmp");
+	SDL_Surface *enemy = SDL_LoadBMP("enemy.bmp");
 	enemyTexture = SDL_CreateTextureFromSurface(gRenderer, enemy);
 	SDL_FreeSurface(enemy);
 			
@@ -252,7 +252,7 @@ void mediaInit() {
 	}
 
 	//Load Sound Effect for EnemyDestroy
-	gEnemyDestroy = Mix_LoadWAV( "Resources/SoundR/EnemyDestroy.wav" );
+	gEnemyDestroy = Mix_LoadWAV( "EnemyDestroy.wav" );
 
 	if( gEnemyDestroy == NULL ) {
 
@@ -260,7 +260,7 @@ void mediaInit() {
 	}
 
 	//load the bg  
-  	SDL_Surface *bg = SDL_LoadBMP("Resources/bg.bmp");
+  	SDL_Surface *bg = SDL_LoadBMP("bg.bmp");
   	backgroundTexture = SDL_CreateTextureFromSurface(gRenderer, bg);
   	SDL_FreeSurface(bg);
 
@@ -270,14 +270,14 @@ void mediaInit() {
   	}
 
 	//Other Sound Effects
-	bCollision = Mix_LoadWAV( "Resources/SoundR/bCollision.wav" );
+	bCollision = Mix_LoadWAV( "bCollision.wav" );
 
 	if( bCollision == NULL ) {
 
 		printf( "Failed to load high sound effect! SDL_mixer Error: %s\n", Mix_GetError() );
 	}
 			
-	font = TTF_OpenFont("Resources/fonts/times.ttf", 80);
+	font = TTF_OpenFont("times.ttf", 80);
 
 	if(!font) {
 
@@ -384,7 +384,7 @@ int diffDisplay() {
  	
 	//Font that will be used
 	TTF_Font *font;
-	font = TTF_OpenFont("Resources/fonts/Oswald-Medium.ttf", 80);
+	font = TTF_OpenFont("Oswald-Medium.ttf", 80);
 	if( font == NULL ){ 
 		printf("Failed to load font for Level Menu. SDL_TTF Error : %s\n", TTF_GetError());
 	}
@@ -393,7 +393,7 @@ int diffDisplay() {
 	SDL_Surface* bgSurface;
 	SDL_Texture* bgTexture;
 
-	bgSurface = SDL_LoadBMP("Resources/bg.bmp");
+	bgSurface = SDL_LoadBMP("bg.bmp");
   	bgTexture = SDL_CreateTextureFromSurface(gRenderer, bgSurface);
 	SDL_FreeSurface(bgSurface);
 
@@ -548,7 +548,7 @@ int menu() {
  	
 	//Font used for the text
 	TTF_Font *font;
-	font = TTF_OpenFont("Resources/fonts/Oswald-Medium.ttf", 200);
+	font = TTF_OpenFont("Oswald-Medium.ttf", 200);
 	if( font == NULL ){ 
 		printf("Failed to load font for Menu. SDL_TTF Error : %s\n", TTF_GetError());
 	}
@@ -557,7 +557,7 @@ int menu() {
 	SDL_Surface* bgSurface;
 	SDL_Texture* bgTexture;
 
-	bgSurface = SDL_LoadBMP("Resources/bg.bmp");
+	bgSurface = SDL_LoadBMP("bg.bmp");
   	bgTexture = SDL_CreateTextureFromSurface(gRenderer, bgSurface);
 	SDL_FreeSurface(bgSurface);
 
