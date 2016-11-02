@@ -1,4 +1,4 @@
-# galacta-game
+Product Name : GALACTA GAME
 
 Name : Himanshu Ganapavarapu
 MIS ID : 111508029
