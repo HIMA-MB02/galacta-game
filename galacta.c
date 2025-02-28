@@ -4,8 +4,8 @@
 //SDL 2 Libaries
 #include<SDL2/SDL.h>
 #include <SDL2/SDL_mixer.h>
-#include<SDL/SDL_image.h>
-#include"SDL/SDL_ttf.h"
+#include<SDL2/SDL_image.h>
+#include"SDL2/SDL_ttf.h"
 //Library used to create and assign bool values and variables
 #include <stdbool.h>
 //Libary that contains the atoi() function
